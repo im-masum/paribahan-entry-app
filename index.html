@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পরিবহন এন্ট্রি সিস্টেম</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="text-center">
+                    <h1 class="display-7">পরিবহন এন্ট্রি সিস্টেম</h1>
+                    <p class="text-muted">গাড়ির তথ্য রেকর্ড করুন</p>
+                </div>
+
+                <!-- Entry Form -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <form id="vehicleForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">গাড়ির নম্বর</label>
+                                    <input type="text" class="form-control" id="vehicleNumber" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">ড্রাইভারের নাম</label>
+                                    <input type="text" class="form-control" id="driverName" required>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">গাড়ির ধরন</label>
+                                    <select class="form-select" id="vehicleType" required>
+                                        <option value="">বাছাই করুন</option>
+                                        <option value="কার">কার</option>
+                                        <option value="পিকআপ">পিকআপ</option>
+                                        <option value="ট্রাক">ট্রাক</option>
+                                        <option value="বাস">বাস</option>
+                                        <option value="মোটরসাইকেল">মোটরসাইকেল</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">প্রবেশের সময়</label>
+                                    <input type="datetime-local" class="form-control" id="entryTime" required>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">মোবাইল নম্বর</label>
+                                    <input type="tel" class="form-control" id="mobileNumber">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">উদ্দেশ্য</label>
+                                <textarea class="form-control" id="purpose" rows="2"></textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">সেভ করুন</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Entries Table -->
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">সকল এন্ট্রি</h5>
+                        <button class="btn btn-sm btn-outline-danger" id="clearEntries">সব মুছে ফেলুন</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>গাড়ির নম্বর</th>
+                                        <th>ড্রাইভার</th>
+                                        <th>গাড়ির ধরন</th>
+                                        <th>প্রবেশের সময়</th>
+                                        <th>মোবাইল</th>
+                                        <th>উদ্দেশ্য</th>
+                                        <th>অ্যাকশন</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="entriesTableBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
