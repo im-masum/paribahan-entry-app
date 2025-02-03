@@ -9,30 +9,29 @@
 </head>
 <body>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-10">
+            <div class="col">
                 <div class="text-center">
                     <h1 class="display-7">পরিবহন এন্ট্রি সিস্টেম</h1>
                     <p class="text-muted">গাড়ির তথ্য রেকর্ড করুন</p>
                 </div>
 
                 <!-- Entry Form -->
-                <div class="card mb-4">
+                <div class="card">
                     <div class="card-body">
                         <form id="vehicleForm">
                             <div class="row">
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-5 mb-4">
                                     <label class="form-label">গাড়ির নম্বর</label>
                                     <input type="text" class="form-control" id="vehicleNumber" required>
                                 </div>
-                                <div class="col-md-6 mb-3">
+                                <div class="col- mb-4">
                                     <label class="form-label">ড্রাইভারের নাম</label>
                                     <input type="text" class="form-control" id="driverName" required>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-4 mb-3">
+                                <div class="col-md-3 mb-2">
                                     <label class="form-label">গাড়ির ধরন</label>
                                     <select class="form-select" id="vehicleType" required>
                                         <option value="">বাছাই করুন</option>
@@ -44,11 +43,11 @@
                                         <option value="বাইসাইকেল">বাইসাইকেল</option>
                                     </select>
                                 </div>
-                                <div class="col-md-5 mb-4">
+                                <div class="col-md-4 mb-4">
                                     <label class="form-label">প্রবেশের সময়</label>
                                     <input type="datetime-local" class="form-control" id="entryTime" required>
                                 </div>
-                                <div class="col-md-4 mb-3">
+                                <div class="col-md-6 mb-4">
                                     <label class="form-label">মোবাইল নম্বর</label>
                                     <input type="tel" class="form-control" id="mobileNumber">
                                 </div>
