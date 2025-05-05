@@ -8,9 +8,9 @@
 
 body {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     margin: 0 auto;
     padding: 1rem;
     width: 100%;
@@ -46,12 +46,12 @@ body {
 .card-header {
     background-color: #fff;
     border-bottom: .5px solid #d2c9c9;
-    padding: 15px 20px;
+    padding: 15px 30px;
 }
 
 .form-label {
-    font-weight: 600;
-    color: #444;
+    font-weight: 700;
+    color: #000;
 }
 
 .form-control, .form-select {
